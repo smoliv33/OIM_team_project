@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open in PrusaSlicer</title>
+</head>
+<body>
+    <h2>Do you want to open this model in PrusaSlicer?</h2>
+    <form action="/open-in-prusa-slicer" method="post">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <button type="submit" name="choice" value="yes">Yes</button>
+        <button type="submit" name="choice" value="no">No</button>
+    </form>
+</body>
+</html>

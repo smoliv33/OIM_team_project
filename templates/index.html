@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeeCube Generator</title>
+</head>
+<body>
+    <h1>SeeCube Generator</h1>
+
+    <form action="/generate" method="post">
+        <label for="userInput">Enter your command:</label>
+        <input type="text" id="userInput" name="userInput" required>
+        <button type="submit">Generate</button>
+    </form>
+
+    <!-- Help text with each example command separated by commas -->
+    <div>
+        <h2>Help</h2>
+        <p>Enter a command to create a 3D shape and export it as an STL file.</p>
+        <p>Example commands:</p>
+        <pre>
+create cube with side 40,
+create sphere with radius 20,
+create cylinder with height 40 radius 20,
+create rectangular prism with length 40 width 30 height 20,
+create triangular pyramid with side 30,
+create square pyramid with base 40 height 30,
+create triangular prism with length 40 base 30 height 20,
+create cone with radius 20 height 40
+        </pre>
+    </div>
+
+    <!-- Result will be displayed here -->
+    {% if result %}
+        <div>
+            <h2>Result</h2>
+            <p>{{ result }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
